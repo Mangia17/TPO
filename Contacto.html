@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Por favor contactenos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='CSS/styles.css'>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+    <form action="mailto:aemangialardi@gmail.com" method="post" enctype="text/plain">
+    <fieldset class="">
+        <legend>Contacto:</legend>
+        <label for="Nombre">Primer Nombre:</label><br>
+        <input type="text" id="Nombre" name="Nombre" required value="" placeholder="Juan" pattern="[a-z]{1,15}"><br>
+        
+        <label for="Apellido">Apellido:</label><br>
+        <input type="text" id="Apellido" name="Apellido" required value="" placeholder="Perez" pattern="[a-z]{1,15}"><br>
+        
+        <label class="required" for="email">Tu email:</label><br />
+        <input id="email" class="input" name="email" type="email" placeholder="aaa@aaa.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" /><br />
+        
+        <input class="btn btn-primary" type="submit" value="Enviar"><br>
+        <input class="btn btn-secondary "type="reset" value="Resetear"><br>
+      </fieldset>
+      <fieldset>
+        <div class="form-check form-switch">
+        <p>Elige el tipo de Instalacion</p>
+        <input class="form-check-input" type="checkbox" role="switch" id="sobre_techo" name="tipo_instalacion" value="sobre_techo">
+        <label for="sobre_techo">Sobre Techo</label><br>
+        <input class="form-check-input" type="checkbox" role="switch" id="Sobre Piso" name="tipo_instalacion" value="sobre_piso">
+        <label for="sobre_piso">Sobre Piso</label><br>
+        <input class="form-check-input" type="checkbox" role="switch" id="sobre_paredes" name="tipo_instalacion" value="sobre_paredes">
+        <label for="sobre_paredes">Sobre Paredes</label>
+      </fieldset>
+        </div>
+      <fieldset>
+      <label for="provincia">Elige la provincia de Instalacion:</label>
+        <select id="provincia" name="provincia">
+            <option value="caba">CABA</option>
+            <option value="buenos_aires">Buenos Aires</option>
+            <option value="cordoba">Cordoba</option>
+            <option value="santafe">Santa Fe</option>
+            <option value="mendoza">Mendoza</option>
+        </select>
+    </fieldset>
+    </form>
+    </div>
+</body>
+</html>

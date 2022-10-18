@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calculo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="icon" href="./Favicon/calcu.ico">
+</head>
+
+<body>
+    <div class="calculo_logo">Elige tu instalacion</div>
+    <div class="tipo">
+    <form>
+        <input type="radio" id="domestica" name="type_installation" value="Domestica">
+        <label for="domestica">Domedstica</label><br>
+        <input type="radio" id="industrial" name="type_installation" value="Industrial">
+        <label for="industrial">Industrial</label><br>
+        <input type="radio" id="hibrida" name="type_installation" value="Hibrida">
+        <label for="hibrida">Hibrida</label>
+    </form>
+    </div>
+    <div class="configurador">
+        <h1>Configurador</h1>
+        <form action="Link" method="POST" target="_blank">
+            <h3>Selecione sus artefactos/ electrodomesticos</h3>
+            <input type="checkbox">
+
+            <label for="quantity">Heladera(s): </label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5">
+            
+            <input type="checkbox">
+            <label for="quantity">Aire acondicionado(s): </label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5">
+            
+
+
+            <input type="submit" value="Calcular">
+            <input type="reset">
+        </form>
+    </div>
+</body>
+
+</html>
