@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div>
+        <ul>api.meteomatics.com/2022-10-22T00:00:00Z--2022-10-25T00:00:00Z:PT1H/t_2m:C,precip_1h:mm,wind_speed_10m:ms/52.520551,13.461804/html</ul>
+   
+        <article id="ChisteContenedor">
+
+            <p id="coord"></p>
+            <p id="weather"></p>
+    
+        </article>
+    
+    </div>
+    
+    <script>
+        fetch('https://archive-api.open-meteo.com/v1/era5?latitude=-32.93&longitude=-68.84&start_date=2022-01-01&end_date=2022-07-13&hourly=temperature_2m')
+
+        .then((response) => response.json())
+        .then((data) => {
+
+            let coord = document.getElementById("timezone");
+            let weather = document.getElementById("hourly");
+
+            coord.innerHTML = "<b>" + data.longitude +"</b>";
+            weather.innerHTML = "<b>" + data.start_date +"</b>";
+
+        });
+    </script>
+
+</body>
+
+</html>

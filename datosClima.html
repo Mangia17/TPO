@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>Prueba de llamado de API</h1>
+    <article id="ChisteContenedor">
+
+        <p id="coord"></p>
+        <p id="weather"></p>
+
+    </article>
+
+    <script>
+        fetch('https://api.nasa.gov/EPIC/api/natural/images?api_key=fuI2VL1dlfKVQSKA50K2z2w3GHLXr0gs4NrBLNSh')
+        //https://api.nasa.gov/planetary/apod?api_key=fuI2VL1dlfKVQSKA50K2z2w3GHLXr0gs4NrBLNSh
+        
+        .then((response) => response.json())
+        .then((data) => {
+
+            let coord = document.getElementById("coord");
+            let weather = document.getElementById("weather");
+
+            coord.innerHTML = "<b>" + data.identifier +"</b>";
+            weather.innerHTML = "<b>" + data.url +"</b>";
+        
+
+
+
+
+        });
+   </script>
+
+
+</body>
+</html>
